@@ -1,4 +1,7 @@
 package ATM;
+
+import java.util.Scanner;
+
 class DepositAccount{
 	int account;//账号
 	String name;//姓名
@@ -6,11 +9,25 @@ class DepositAccount{
 	int deposit;//存款
 	static double interest_rate=0.023;
 	//账户信息
-	void setaccountinfo(int account,String name,double balance) {
+	public void setaccountinfo(int account,String name,double balance) {
 		this.account=account;
 		this.name=name;
 		this.balance=balance;
 	}
+	//开户
+	public void Createaccount() {
+		System.out.println("请输入姓名");
+		Scanner scan = new Scanner(System.in);
+		name=scan.next();
+		account=(int)(Math.random()*90000+10000);
+		System.out.println("姓名："+name);
+		System.out.println("您的帐号为："+account);
+		System.out.println("请存款");
+		balance=scan.nextInt();
+		
+		
+	}
+	//余额
 	public double deposit(int deposit) {
 		balance=deposit+balance;
 		return balance;
