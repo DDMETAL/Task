@@ -6,7 +6,7 @@ public class Graduate implements StudentManage,TeacherManage {
 	private int age;
 	private double fee;
 	private double pay;
-	
+	//构造方法
 	public Graduate(String name, String sex, int age, double fee, double pay) {
 		super();
 		this.name = name;
@@ -15,7 +15,9 @@ public class Graduate implements StudentManage,TeacherManage {
 		this.fee = fee;
 		this.pay = pay;
 	}
-	
+	/*
+	 * get()和set()方法
+	 */
 	public String getName() {
 		return name;
 	}
